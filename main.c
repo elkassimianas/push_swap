@@ -6,12 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:49:52 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/02 16:17:25 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/03 11:42:51 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "Libft/libft.h"
 
 int     main(int argc, char **argv)
 {
@@ -23,18 +22,15 @@ int     main(int argc, char **argv)
     while(argv[++i])
     {
         b = 0;
-        while (*argv[b])
+        while (argv[i][b])
         {
-            if (ft_isdigit(*argv[b++]) == 0)
+            if (ft_isdigit(argv[i][b++]) == 0)
             {
                 printf("error\n");
-                return 0;
+                return (-1);
             }
         }
-        if (ft_isdigit(*argv[i]) == 1)
-            printf("%s\n", argv[i]);
-        else
-            printf("error\n");
+        printf("%s\n", argv[i]);
     }
     return 0;
 }

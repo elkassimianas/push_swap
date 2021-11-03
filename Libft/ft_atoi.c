@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-kass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 13:58:58 by ael-kass          #+#    #+#             */
-/*   Updated: 2019/11/06 16:26:24 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/03 11:16:16 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ int		ft_atoi(const char *str)
 			return ((sign > 0) ? -1 : 0);
 		nb = nb * 10 + (str[i] - 48);
 		i++;
+	}
+	if (nb > 2147483647)
+	{
+		ft_putstr_fd("error\n", 2);
+		exit(EXIT_FAILURE);
 	}
 	return (nb * sign);
 }
