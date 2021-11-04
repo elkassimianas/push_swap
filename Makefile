@@ -6,7 +6,7 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 11:17:34 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/03 11:38:01 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/03 16:13:29 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = parsing.c \
 
 FLAGS = -Wall -Wextra -Werror
 
-CC = gcc
+CC = gcc -g
 
 LIB = ./Libft/libft.a
 

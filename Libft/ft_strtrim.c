@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-kass <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 16:28:50 by ael-kass          #+#    #+#             */
-/*   Updated: 2019/11/03 22:47:47 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/03 16:04:33 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || set == NULL)
 		return (NULL);
-	if (set == '\0')
+	if (set == (void *)0)
 		return (ft_strdup(s1));
 	d = 0;
 	b = f_strcmp1(s1, set);
