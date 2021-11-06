@@ -6,7 +6,7 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:39:44 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/03 09:43:30 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/05 11:49:43 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ SRC = ft_memset.c \
 	  ft_putstr_fd.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c \
+	  ft_strlen_d.c
 
 OBJS = $(SRC:.c=.o)
 

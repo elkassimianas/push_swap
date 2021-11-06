@@ -6,17 +6,16 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:54 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/03 18:07:20 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/05 15:47:17 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void parsing(char **str, int len)
+t_node  *parsing(char **str, int len, t_node *top_a)
 {
     int     i;
     int     b;
-    int     num;
 
     i = 0;
     while(++i < len)
@@ -45,7 +44,9 @@ void parsing(char **str, int len)
                 exit(EXIT_FAILURE);
             }
         }
-        num = ft_atoi(str[i]);
-        printf("%d\n", num);
+        push(ft_atoi(str[i]), &top_a); // if there some error do not forget to free the linked list "call function free inside ft_atoi"
     }
+    reverse(&top_a);
+    // display(top_a);
+    return (top_a);
 }

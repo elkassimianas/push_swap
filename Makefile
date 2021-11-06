@@ -6,14 +6,16 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 11:17:34 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/03 16:13:29 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/05 15:08:26 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 SRC = parsing.c \
-	  main.c
+		tools.c \
+		operations.c \
+		main.c
 
 FLAGS = -Wall -Wextra -Werror
 
