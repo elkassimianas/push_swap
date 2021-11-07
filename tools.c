@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:53:47 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/05 15:42:12 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:55:05 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void display(t_node *top)
 {
     t_node *temp;
  
-    printf("stack\n");
+    printf("\n");
     // Check for stack underflow
     if (top == NULL)
         exit(1);

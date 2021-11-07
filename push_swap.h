@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:15 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/05 15:46:07 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:52:10 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ void    reverse(t_node **top);
 void    push_swap(int len, t_node *top_a, t_node *top_b);
 void    display(t_node *top);
 int     len_linked_list(t_node *top);
-void    swap(t_node **top_a);
+void    swap(t_node **top_a, char *str);
 void    push_an_stack(t_node **top1, t_node **top2);
+void    rotate(t_node **top);
+void    reverse_rotate(t_node **top);
 
 #endif

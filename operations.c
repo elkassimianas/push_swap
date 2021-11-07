@@ -6,13 +6,13 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:05:39 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/05 18:13:50 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/06 17:51:57 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    swap(t_node **top)
+void    swap(t_node **top, char *str)
 {
     int     temp;
     t_node  *next;
@@ -23,6 +23,7 @@ void    swap(t_node **top)
     temp = next->data;
     next->data = (*top)->data;
     (*top)->data = temp;
+	ft_putstr_fd(str, 1);
 }
 
 void    push_an_stack(t_node **top1, t_node **top2)
@@ -34,7 +35,6 @@ void    push_an_stack(t_node **top1, t_node **top2)
 }
 void    rotate(t_node **top)
 {
-    int     data;
     t_node  *current;
     t_node  *temp;
     
@@ -45,5 +45,29 @@ void    rotate(t_node **top)
     while (current->next != NULL)
         current = current->next;
     current->next = temp;
+    return ;
+}
+
+void    reverse_rotate(t_node **top)
+{
+    t_node      *current;
+    t_node      *last;
+    t_node      *temp;
+    int			len;
+    int			i;
+    
+    len = len_linked_list(*top);
+    current = *top;
+    temp = (t_node *)malloc(sizeof(t_node));
+    temp->next = NULL;
+    i = -1;
+    while (++i < len - 2)
+        current = current->next;
+    last = current->next;
+    current->next = NULL;
+    temp->data = last->data;
+    free(last);
+    temp->next = *top;
+    *top = temp;
     return ;
 }
