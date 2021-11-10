@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:15 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/06 17:52:10 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/09 12:21:11 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,19 @@ t_node  *parsing(char **str, int len, t_node *top_a);
 void    push(int data, t_node **top);
 int     pop(t_node **top);
 void    reverse(t_node **top);
-void    push_swap(int len, t_node *top_a, t_node *top_b);
+void    push_swap(int len, t_node **top_a, t_node **top_b);
 void    display(t_node *top);
 int     len_linked_list(t_node *top);
 void    swap(t_node **top_a, char *str);
-void    push_an_stack(t_node **top1, t_node **top2);
-void    rotate(t_node **top);
-void    reverse_rotate(t_node **top);
+void    push_to_stack(t_node **top1, t_node **top2, char *str);
+void    rotate(t_node **top, char *str);
+void    reverse_rotate(t_node **top, char *str);
+void    sort_small_stack(t_node **top_a, t_node **top_b, int len);
+void    three_numbers(t_node **top_a, t_node *current);
+void	free_list(t_node *top);
+void    four_numbers(t_node **top_a, t_node **top_b, t_node *current);
+int		find_min_num(t_node **top_a, t_node *current);
+void    five_numbers(t_node **top_a, t_node **top_b, t_node *current);
+int		check_is_sorted(t_node **top_a);
 
 #endif

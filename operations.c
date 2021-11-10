@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:05:39 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/06 17:51:57 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/09 12:17:10 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,18 @@ void    swap(t_node **top, char *str)
 	ft_putstr_fd(str, 1);
 }
 
-void    push_an_stack(t_node **top1, t_node **top2)
+void    push_to_stack(t_node **top1, t_node **top2, char *str)
 {
     int     data;
 
+    if (*top2 == NULL)
+        return ;
     data = pop(top2);
     push(data, top1);
+    ft_putstr_fd(str, 1);
 }
-void    rotate(t_node **top)
+
+void    rotate(t_node **top, char *str)
 {
     t_node  *current;
     t_node  *temp;
@@ -45,10 +49,11 @@ void    rotate(t_node **top)
     while (current->next != NULL)
         current = current->next;
     current->next = temp;
+    ft_putstr_fd(str, 1);
     return ;
 }
 
-void    reverse_rotate(t_node **top)
+void    reverse_rotate(t_node **top, char *str)
 {
     t_node      *current;
     t_node      *last;
@@ -69,5 +74,6 @@ void    reverse_rotate(t_node **top)
     free(last);
     temp->next = *top;
     *top = temp;
+    ft_putstr_fd(str, 1);
     return ;
 }

@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:54 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/05 15:47:17 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/08 15:43:43 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_node  *parsing(char **str, int len, t_node *top_a)
         {
             if (strcmp(str[i], str[b]) == 0)
             {
-                ft_putstr_fd("error\n", 2);
+                ft_putstr_fd("Error\n", 2);
 			    exit(EXIT_FAILURE);
             }
         }
@@ -34,13 +34,13 @@ t_node  *parsing(char **str, int len, t_node *top_a)
     while(str[++i])
     {
         b = 0;
-        if (str[i][b] == '-')
+        if (str[i][b] == '-' && str[i][b + 1])
             b++;
         while (str[i][b])
         {
             if (ft_isdigit(str[i][b++]) == 0)
             {
-                printf("error\n");
+                ft_putstr_fd("Error\n", 2);
                 exit(EXIT_FAILURE);
             }
         }

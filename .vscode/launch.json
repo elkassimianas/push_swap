@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/Users/anaselkassimi/Desktop/push_swap_git/push_swap",
-            "args": ["-123"],
+            "args": ["23", "1", "4", "30", "3"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
