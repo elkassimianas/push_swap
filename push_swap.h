@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:15 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/09 12:21:11 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 16:04:13 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct s_node
 {
     /* data */
     int     data;
+    int     index;
     struct s_node   *next;
     
 }               t_node;
@@ -43,5 +44,8 @@ void    four_numbers(t_node **top_a, t_node **top_b, t_node *current);
 int		find_min_num(t_node **top_a, t_node *current);
 void    five_numbers(t_node **top_a, t_node **top_b, t_node *current);
 int		check_is_sorted(t_node **top_a);
+void    merge(int *arr, int *right, int *left, int lenR, int lenL);
+void    merge_sort(int **arr, int len , int mid_len);
+void    sort_big_stack(t_node **top_a, t_node **top_b, int len);
 
 #endif

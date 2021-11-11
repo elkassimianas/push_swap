@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:49:52 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/09 12:50:13 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 15:16:34 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void    push_swap(int len, t_node **top_a, t_node **top_b)
 		return ;
     else if (len <= 5)
     	sort_small_stack(top_a, top_b, len);
-    else
-        sort_big_stack();
+	else
+        sort_big_stack(top_a, top_b, len);
   //	display(*top_a);
 }
 

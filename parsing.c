@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:54 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/08 15:43:43 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 15:05:07 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ t_node  *parsing(char **str, int len, t_node *top_a)
         push(ft_atoi(str[i]), &top_a); // if there some error do not forget to free the linked list "call function free inside ft_atoi"
     }
     reverse(&top_a);
+    i = 1;
     // display(top_a);
     return (top_a);
 }
