@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:53:47 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 18:11:29 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 19:57:35 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,4 +189,6 @@ void    merge_sort(int **arr, int len , int mid_len)
     merge_sort(&left, mid_len, mid_len);
     merge_sort(&right, len - mid_len, mid_len);
     merge(*arr, right, left, len - mid_len, mid_len);
+    free(right);
+    free(left);
 }
