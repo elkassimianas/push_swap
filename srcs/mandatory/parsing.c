@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:54 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/12 17:07:24 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:38:51 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void    check_duplicat(char **str, int len)
     }
 }
 
-void    check_grammar(char **str, t_node **top_a)
+int    check_grammar(char **str, t_node **top_a)
 {
     int     i;
     int     b;
@@ -47,23 +47,24 @@ void    check_grammar(char **str, t_node **top_a)
             if (ft_isdigit(str[i][b++]) == 0)
             {
                 ft_putstr_fd("Error\n", 2);
-                exit(EXIT_FAILURE);
+                return (0);
             }
         b = ft_atoi(str[i]);
         if (b == -1)
-        {
-            if (*top_a != NULL)
-                free(*top_a);
-            exit(EXIT_FAILURE);
-        }
+            return (0);
         push(b, top_a);
     }
+    return (1);
 }
 
 t_node  *parsing(char **str, int len, t_node *top_a)
 {
     check_duplicat(str, len);
-    check_grammar(str, &top_a);
+    if (!check_grammar(str, &top_a))
+    {
+        free_linked_list(&top_a);
+        exit (EXIT_FAILURE);
+    }
     reverse(&top_a);
     return (top_a);
 }

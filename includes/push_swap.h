@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:15 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/12 17:08:15 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:36:45 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void    rotate(t_node **top, char *str);
 void    reverse_rotate(t_node **top, char *str);
 void    sort_small_stack(t_node **top_a, t_node **top_b, int len);
 void    three_numbers(t_node **top_a, t_node *current);
-void	free_list(t_node *top);
 void    four_numbers(t_node **top_a, t_node **top_b, t_node *current);
 int		find_min_num(t_node **top_a, t_node *current);
 void    five_numbers(t_node **top_a, t_node **top_b, t_node *current);
@@ -47,5 +46,6 @@ int		check_is_sorted(t_node **top_a);
 void    merge(int *arr, int *right, int *left, int lenR, int lenL);
 void    merge_sort(int **arr, int len , int mid_len);
 void    sort_big_stack(t_node **top_a, t_node **top_b, int len);
+void    free_linked_list(t_node **head);
 
 #endif

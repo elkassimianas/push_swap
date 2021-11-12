@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:53:47 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/12 17:09:15 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:36:40 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,18 +114,6 @@ int len_linked_list(t_node *top)
     return (i);
 }
 
-void free_list(t_node *top)
-{
-   t_node *tmp;
-
-   while (top != NULL)
-    {
-       tmp = top;
-       top = top->next;
-       free(tmp);
-    }
-}
-
 void    merge(int *arr, int *right, int *left, int lenR, int lenL)
 {
     int     i;
@@ -191,4 +179,17 @@ void    merge_sort(int **arr, int len , int mid_len)
     merge(*arr, right, left, len - mid_len, mid_len);
     free(right);
     free(left);
+}
+
+void    free_linked_list(t_node **head)
+{
+    t_node  *next;
+    
+    next = NULL;
+    while (*head != NULL)
+    {
+        next = (*head)->next;
+        free(*head);
+        *head = next;
+    }
 }
