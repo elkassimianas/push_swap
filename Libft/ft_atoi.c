@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 13:58:58 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 22:55:15 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 19:38:11 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int		ft_atoi(const char *str)
 		if (nb < 0)
 		{
 			ft_putstr_fd("Error\n", 2);
-			return (-1);
+			exit(EXIT_FAILURE);
 		}
 		nb = nb * 10 + (str[i] - 48);
 		i++;
@@ -58,7 +58,7 @@ int		ft_atoi(const char *str)
 	if (nb > 2147483647 || nb < -2147483648)
 	{
 		ft_putstr_fd("Error\n", 2);
-		return (-1);
+		exit(EXIT_FAILURE);
 	}
 	return (nb);
 }

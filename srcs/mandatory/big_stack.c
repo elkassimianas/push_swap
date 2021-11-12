@@ -6,50 +6,58 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:51:17 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/12 17:08:41 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:02:03 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
+void	set_index(int *arr, t_node **top_a, int len)
+{
+	t_node	*current;
+	int		i;
+
+	i = -1;
+	while (++i < len)
+	{
+		current = *top_a;
+		while (current != NULL)
+		{
+			if (arr[i] == current->data)
+				current->index = i;
+			current = current->next;
+		}
+	}
+}
+
 void	get_index(t_node **top_a, int len)
 {
-    int     *arr;
+	int		*arr;
 	int		i;
-    t_node  *current;
+	t_node	*current;
 
-    arr = malloc((len) * sizeof(int));
-    if (arr == NULL)
-        exit(EXIT_FAILURE);
-    current = *top_a;
-    i = -1;
-    while (current != NULL)
-    {
-        arr[++i] = current->data;
-        current = current->next;
-    }
-    merge_sort(&arr, len, 0);
-    i = -1;
-    while (++i < len)
-    {
-        current = *top_a;
-        while (current != NULL)
-        {
-            if (arr[i] == current->data)
-                current->index = i;
-            current = current->next;
-        }
-    }
+	arr = malloc((len) * sizeof(int));
+	if (arr == NULL)
+		exit(EXIT_FAILURE);
+	current = *top_a;
+	i = -1;
+	while (current != NULL)
+	{
+		arr[++i] = current->data;
+		current = current->next;
+	}
+	merge_sort(&arr, len, 0);
+	set_index(arr, top_a, len);
 	free(arr);
 }
 
-void    sort_big_stack(t_node **top_a, t_node **top_b, int len)
+void	sort_big_stack(t_node **top_a, t_node **top_b, int len)
 {
 	int		max_num;
 	int		num_bits;
 	int		i;
 	int		j;
-	
+
 	get_index(top_a, len);
 	max_num = len - 1;
 	num_bits = 0;
@@ -67,6 +75,6 @@ void    sort_big_stack(t_node **top_a, t_node **top_b, int len)
 				rotate(top_a, "ra\n");
 		}
 		while (*top_b != NULL)
-			push_to_stack(top_a, top_b, "pa\n");		
+			push_to_stack(top_a, top_b, "pa\n");
 	}
 }

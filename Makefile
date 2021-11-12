@@ -6,7 +6,7 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 11:17:34 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/11 23:18:27 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/12 20:48:40 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,11 @@ SRC = ./srcs/mandatory/parsing.c \
 		./srcs/mandatory/operations.c \
 		./srcs/mandatory/small_stack.c \
 		./srcs/mandatory/big_stack.c \
+		./srcs/mandatory/small_stack_tools.c \
+		./srcs/mandatory/merge_sort.c \
 		./srcs/mandatory/main.c
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -fsanitize=address
 
 CC = gcc -g
 
