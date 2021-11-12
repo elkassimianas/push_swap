@@ -6,18 +6,18 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 11:17:34 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/11 19:58:48 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/11 23:18:27 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC = parsing.c \
-		tools.c \
-		operations.c \
-		small_stack.c \
-		big_stack.c \
-		main.c
+SRC = ./srcs/mandatory/parsing.c \
+		./srcs/mandatory/tools.c \
+		./srcs/mandatory/operations.c \
+		./srcs/mandatory/small_stack.c \
+		./srcs/mandatory/big_stack.c \
+		./srcs/mandatory/main.c
 
 FLAGS = -Wall -Wextra -Werror
 

@@ -6,11 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 11:22:59 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/09 12:46:56 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:35:20 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 void    sort_small_stack(t_node **top_a, t_node **top_b, int len)
 {

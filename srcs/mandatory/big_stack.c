@@ -6,11 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 12:51:17 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 20:15:59 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:34:41 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 void	get_index(t_node **top_a, int len)
 {
@@ -40,20 +40,6 @@ void	get_index(t_node **top_a, int len)
             current = current->next;
         }
     }
-	// current = *top_a;
-	// while (current != NULL)
-	// {
-	// 	printf("%d\n", current->data);
-	// 	current = current->next;
-	// }
-	// printf("--------------------------\n");
-	// current = *top_a;
-	// while (current != NULL)
-	// {
-	// 	printf("%d\n", current->index);
-	// 	current = current->next;
-	// }
-	// exit (0);
 	free(arr);
 }
 
@@ -83,9 +69,4 @@ void    sort_big_stack(t_node **top_a, t_node **top_b, int len)
 		while (*top_b != NULL)
 			push_to_stack(top_a, top_b, "pa\n");		
 	}
-	// while (*top_a != NULL)
-	// {
-	// 	printf("%d\n", (*top_a)->index);
-	// 	*top_a = (*top_a)->next;
-	// }
 }

@@ -6,11 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:53:47 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 19:57:35 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 23:04:33 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 void display(t_node *top)
 {
@@ -192,3 +192,5 @@ void    merge_sort(int **arr, int len , int mid_len)
     free(right);
     free(left);
 }
+
+void    print_error()

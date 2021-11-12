@@ -6,11 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:49:52 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 15:16:34 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:34:49 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 int    check_is_sorted(t_node **top_a)
 {
@@ -37,7 +37,6 @@ void    push_swap(int len, t_node **top_a, t_node **top_b)
     	sort_small_stack(top_a, top_b, len);
 	else
         sort_big_stack(top_a, top_b, len);
-  //	display(*top_a);
 }
 
 int     main(int argc, char **argv)
