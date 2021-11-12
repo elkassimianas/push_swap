@@ -6,11 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:54 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 23:18:00 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:07:24 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void    check_duplicat(char **str, int len)
 {

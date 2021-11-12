@@ -6,14 +6,14 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:15 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 16:04:13 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:08:15 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "Libft/libft.h"
+# include "../Libft/libft.h"
 # include <stdio.h>
 #include <string.h>
 

@@ -6,11 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:05:39 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 22:34:57 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:08:46 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void    swap(t_node **top, char *str)
 {

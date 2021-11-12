@@ -6,11 +6,11 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:49:52 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/11 22:34:49 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/12 17:10:37 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 int    check_is_sorted(t_node **top_a)
 {
