@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 23:41:42 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 20:48:07 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/13 20:57:13 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 int    check_operations(t_node **top_a, t_node **top_b, char *str)
 {  
-    if (!strcmp(str, "sa") || !strcmp(str, "sb") || !strcmp(str, "ss"))
+    if (!ft_strncmp(str, "sa", ft_strlen(str)) || !ft_strncmp(str, "sb", ft_strlen(str)) || !ft_strncmp(str, "ss", ft_strlen(str)))
     {
-        if (!strcmp(str, "sa"))
+        if (!ft_strncmp(str, "sa", ft_strlen(str)))
             swap(top_a);
-        else if (!strcmp(str, "sb"))
+        else if (!ft_strncmp(str, "sb", ft_strlen(str)))
             swap(top_b);
         else
         {
@@ -28,9 +28,9 @@ int    check_operations(t_node **top_a, t_node **top_b, char *str)
         }
         return (1);
     }
-    else if (!strcmp(str, "pa") || !strcmp(str, "pb"))
+    else if (!ft_strncmp(str, "pa", ft_strlen(str)) || !ft_strncmp(str, "pb", ft_strlen(str)))
     {
-        if (!strcmp(str, "pa"))
+        if (!ft_strncmp(str, "pa", ft_strlen(str)))
             push_to_stack(top_a, top_b);
         else
             push_to_stack(top_b, top_a);
@@ -45,11 +45,11 @@ int    check_operations(t_node **top_a, t_node **top_b, char *str)
 
 int    check_operations1(t_node **top_a, t_node **top_b, char *str)
 {
-    if (!strcmp(str, "ra") || !strcmp(str, "rb") || !strcmp(str, "rr"))
+    if (!ft_strncmp(str, "ra", ft_strlen(str)) || !ft_strncmp(str, "rb", ft_strlen(str)) || !ft_strncmp(str, "rr", ft_strlen(str)))
     {
-        if (!strcmp(str, "ra"))
+        if (!ft_strncmp(str, "ra", ft_strlen(str)))
             rotate(top_a);
-        else if (!strcmp(str, "rb"))
+        else if (!ft_strncmp(str, "rb", ft_strlen(str)))
             rotate(top_b);
         else
         {

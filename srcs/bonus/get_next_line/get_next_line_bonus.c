@@ -6,13 +6,13 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 15:41:32 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 02:10:39 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/13 21:34:10 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/get_next_line_bonus.h"
 
-int		ft_free(char **s)
+int	ft_free(char **s)
 {
 	if (*s)
 	{
@@ -22,7 +22,7 @@ int		ft_free(char **s)
 	return (-1);
 }
 
-int		ft_helpline(int i, char ***save, char **buffer)
+int	ft_helpline(int i, char ***save, char **buffer)
 {
 	if (i < 0)
 	{
@@ -33,7 +33,7 @@ int		ft_helpline(int i, char ***save, char **buffer)
 	return (1);
 }
 
-int		ft_affect(int fd, char **save, char **buffer)
+int	ft_affect(int fd, char **save, char **buffer)
 {
 	char	*tmp2;
 	int		ret2;
@@ -46,10 +46,12 @@ int		ft_affect(int fd, char **save, char **buffer)
 	{
 		i = read(fd, *buffer, BUFFER_SIZE);
 		(*buffer)[i] = '\0';
-		if ((ret2 = ft_helpline(i, &save, buffer)) < 0)
+		ret2 = ft_helpline(i, &save, buffer);
+		if (ret2 < 0)
 			return (-1);
 		tmp2 = *save;
-		if (!(*save = ft_strjoin(*save, *buffer)))
+		*save = ft_strjoin(*save, *buffer);
+		if (!*save)
 			return (-1);
 		ft_free(&tmp2);
 		while ((*save)[len] != '\0' && (*save)[len] != '\n')
@@ -60,7 +62,7 @@ int		ft_affect(int fd, char **save, char **buffer)
 	return (len);
 }
 
-int		ft_linen(char **save, char ***line, int len)
+int	ft_linen(char **save, char ***line, int len)
 {
 	char	*tmp;
 
@@ -80,7 +82,7 @@ int		ft_linen(char **save, char ***line, int len)
 	return (0);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static char		*save;
 	char			*buffer;
@@ -89,21 +91,20 @@ int		get_next_line(int fd, char **line)
 
 	if (BUFFER_SIZE < 0 || fd < 0 || line == NULL)
 		return (-1);
-	if (!(buffer = (char *)malloc(BUFFER_SIZE + 1 * sizeof(char))))
+	buffer = (char *)malloc(BUFFER_SIZE + 1 * sizeof(char));
+	if (!buffer)
 		return (-1);
 	if (save == NULL)
-		if (!(save = (char *)ft_calloc(1, sizeof(char))))
-			return (-1);
+		save = (char *)ft_calloc(1, sizeof(char));
+	if (!save)
+		return (-1);
 	len = ft_affect(fd, &save, &buffer);
 	ft_free(&buffer);
 	if (len < 0)
 		return (-1);
-	ret = ft_linen(&save, &line, len);
-	if (ret == 1)
-		return (1);
-	if (save[len] == '\0')
-		if (!(*line = ft_substr(save, 0, len)))
-			return (-1);
+	ret = get_next_line_help(&save, &line, len);
 	ft_free(&save);
+	if (ret != 0)
+	 	return (ret);
 	return (0);
 }
