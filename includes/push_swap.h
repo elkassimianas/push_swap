@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:15 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/12 20:39:22 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/13 18:23:10 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ typedef struct s_node
     
 }               t_node;
 
+typedef struct s_merge
+{
+    int     len_l;
+    int     len_r;
+}               t_merge;
+
+
 t_node  *parsing(char **str, int len, t_node *top_a);
 void    push(int data, t_node **top);
 int     pop(t_node **top);
@@ -43,7 +50,6 @@ void    four_numbers(t_node **top_a, t_node **top_b, t_node *current);
 int		find_min_num(t_node **top_a, t_node *current);
 void    five_numbers(t_node **top_a, t_node **top_b, t_node *current);
 int		check_is_sorted(t_node **top_a);
-void    merge(int *arr, int *right, int *left, int lenR, int lenL);
 void    merge_sort(int **arr, int len , int mid_len);
 void    sort_big_stack(t_node **top_a, t_node **top_b, int len);
 void	position_1(t_node **top_a, t_node **top_b);

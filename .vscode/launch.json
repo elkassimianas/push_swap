@@ -8,12 +8,12 @@
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/Users/ael-kass/Desktop/anas/push_swap",
-            "args": [],
+            "program": "/Users/ael-kass/Desktop/anas/checker",
+            "args": ["0", "1", "-2", "-1", "<", "file.txt"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "lldb"
         },
     ]

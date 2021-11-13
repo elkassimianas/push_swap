@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 23:41:42 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 03:17:31 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/13 20:48:07 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 int    check_operations(t_node **top_a, t_node **top_b, char *str)
 {  
-    if (strcmp(str, "sa") || strcmp(str, "sb") || strcmp(str, "ss"))
+    if (!strcmp(str, "sa") || !strcmp(str, "sb") || !strcmp(str, "ss"))
     {
-        if (strcmp(str, "sa"))
+        if (!strcmp(str, "sa"))
             swap(top_a);
-        else if (strcmp(str, "sb"))
+        else if (!strcmp(str, "sb"))
             swap(top_b);
         else
         {
@@ -28,28 +28,28 @@ int    check_operations(t_node **top_a, t_node **top_b, char *str)
         }
         return (1);
     }
-    else if (str == "pa" || str == "pb")
+    else if (!strcmp(str, "pa") || !strcmp(str, "pb"))
     {
-        if (str == "pa")
+        if (!strcmp(str, "pa"))
             push_to_stack(top_a, top_b);
         else
             push_to_stack(top_b, top_a);
         return (1);
     }
-    if (check_operations1(top_a, top_b, str) != 1 ||
-    check_operations2(top_a, top_b, str) != 1)
-        return (0);
-    else
+    if (check_operations1(top_a, top_b, str) == 1 ||
+    check_operations2(top_a, top_b, str) == 1)
         return (1);
+    else
+        return (0);
 }
 
 int    check_operations1(t_node **top_a, t_node **top_b, char *str)
 {
-    if (str == "ra" || str == "rb" || str == "rr")
+    if (!strcmp(str, "ra") || !strcmp(str, "rb") || !strcmp(str, "rr"))
     {
-        if (str == "ra")
+        if (!strcmp(str, "ra"))
             rotate(top_a);
-        else if (str == "rb")
+        else if (!strcmp(str, "rb"))
             rotate(top_b);
         else
         {
@@ -63,11 +63,11 @@ int    check_operations1(t_node **top_a, t_node **top_b, char *str)
 
 int    check_operations2(t_node **top_a, t_node **top_b, char *str)
 {
-    if (str == "rra" || str == "rrb" || str == "rrr")
+    if (!strcmp(str, "rra") || !strcmp(str, "rrb") || !strcmp(str, "rrr"))
     {
-        if (str == "rra")
+        if (!strcmp(str, "rra"))
             reverse_rotate(top_a);
-        else if (str == "rrb")
+        else if (!strcmp(str, "rrb"))
             reverse_rotate(top_b);
         else
         {
@@ -85,7 +85,7 @@ int    read_operations(t_node **top_a, t_node **top_b)
     char    *line;
     int     ret;
 
-    while (ret = get_next_line(0, &line) == 1)
+    while ((ret = get_next_line(0, &line)) == 1)
     {
         if (!check_operations(top_a, top_b, line))
         {
@@ -94,8 +94,9 @@ int    read_operations(t_node **top_a, t_node **top_b)
             return (0);
         }
         free(line);
+        line = NULL;
     }
-    if (ret == 0 && line != NULL)
+    if (ret == 0 && *line != '\0')
     {
         ft_putstr_fd("Error\n", 2);
         return (0);
@@ -107,7 +108,6 @@ int main(int argc, char **argv)
 {
     t_node	*top_a;
     t_node	*top_b;
-    int     ret;
 
     top_a = NULL;
     top_b = NULL;
