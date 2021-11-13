@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:49:52 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/12 20:03:37 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/13 00:05:07 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int	main(int argc, char **argv)
 	top_a = NULL;
 	top_b = NULL;
 	top_a = parsing(argv, argc, top_a);
+	if (top_a == NULL)
+		return (-1);
 	push_swap(argc - 1, &top_a, &top_b);
 	if (top_a != NULL)
 		free_list(top_a);
