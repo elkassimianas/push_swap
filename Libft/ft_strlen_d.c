@@ -6,18 +6,18 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 11:46:17 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/05 11:48:34 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:36:52 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen_d(const char **str)
+size_t	ft_strlen_d(const char **str)
 {
-    unsigned int i;
+	unsigned int	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

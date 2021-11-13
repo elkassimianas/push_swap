@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 17:26:47 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 18:52:43 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:38:49 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const	char *src, size_t dstsize);
 size_t	ft_strlen(const char *str);
-size_t  ft_strlen_d(const char **str);
+size_t	ft_strlen_d(const char **str);
 int		ft_strncmp(const char *s1, const char*s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
@@ -42,7 +42,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_atoi(const char *str);
-void	ft_bzero (void *p, size_t n);
+void	ft_bzero(void *p, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_putchar_fd(char c, int fd);

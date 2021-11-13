@@ -6,7 +6,7 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 16:39:44 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/13 18:52:53 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/14 00:31:24 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,6 @@ SRC = ft_memset.c \
 	  ft_strjoin.c \
 	  ft_strtrim.c \
 	  ft_split.c \
-	  ft_itoa.c \
 	  ft_strmapi.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \

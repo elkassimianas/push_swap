@@ -6,7 +6,7 @@
 /*   By: ael-kass <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 13:43:34 by ael-kass          #+#    #+#             */
-/*   Updated: 2019/10/29 15:47:51 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:35:37 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (str[i] != '\0')

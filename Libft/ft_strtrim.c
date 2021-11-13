@@ -6,13 +6,13 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 16:28:50 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 18:53:00 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:38:09 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		f_strcmp1(char const *s1, char const *s2)
+int	f_strcmp1(char const *s1, char const *s2)
 {
 	int		b;
 	int		c;
@@ -39,7 +39,7 @@ int		f_strcmp1(char const *s1, char const *s2)
 	return (b);
 }
 
-int		f_strcmp2(char const *s1, char const *s2)
+int	f_strcmp2(char const *s1, char const *s2)
 {
 	int		i;
 	int		a;

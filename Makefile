@@ -6,7 +6,7 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 11:17:34 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/13 22:33:15 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/14 00:33:21 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,9 +36,9 @@ INCLUDES =  ./includes/push_swap.h
 INCLUDES_BONUS = ./includes/push_swap_bonus.h \
 					./includes/get_next_line_bonus.h
 
-FLAGS = -Wall -Wextra -Werror -fsanitize=address
+FLAGS = -Wall -Wextra -Werror
 
-CC = gcc -g
+CC = gcc
 
 LIB = ./Libft/libft.a
 
