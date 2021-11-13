@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 23:34:34 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 03:11:39 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:03:43 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	push(int data, t_node **top)
 	*top = temp;
 }
 
-int		pop(t_node **top)
+int	pop(t_node **top)
 {
 	t_node	*temp;
 	int		data;

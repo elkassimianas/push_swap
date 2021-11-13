@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/Users/ael-kass/Desktop/anas/checker",
-            "args": ["0", "1", "-2", "-1", "<", "file.txt"],
+            "args": ["0", "1", "-2", "-1"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

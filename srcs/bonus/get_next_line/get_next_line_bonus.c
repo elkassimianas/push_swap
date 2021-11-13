@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 15:41:32 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 21:34:10 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/13 22:15:57 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,6 @@ int	get_next_line(int fd, char **line)
 	ret = get_next_line_help(&save, &line, len);
 	ft_free(&save);
 	if (ret != 0)
-	 	return (ret);
+		return (ret);
 	return (0);
 }

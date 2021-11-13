@@ -6,18 +6,18 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/13 13:58:58 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/12 19:38:11 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/14 00:24:54 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_space(char c)
+int	is_space(char c)
 {
 	return ((c >= 9 && c <= 13) || c == 32);
 }
 
-int		ft_passing(const char *str)
+int	ft_passing(const char *str)
 {
 	int		i;
 
@@ -27,23 +27,8 @@ int		ft_passing(const char *str)
 	return (i);
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi_help(const char *str, long nb, int sign, int i)
 {
-	long		nb;
-	int			sign;
-	int			i;
-
-	i = 0;
-	nb = 0;
-	sign = 1;
-	i = ft_passing(str);
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
-	{
-		sign = -1;
-		i++;
-	}
 	while (str[i] >= 48 && str[i] <= 57)
 	{
 		if (nb < 0)
@@ -61,4 +46,24 @@ int		ft_atoi(const char *str)
 		exit(EXIT_FAILURE);
 	}
 	return (nb);
+}
+
+int	ft_atoi(const char *str)
+{
+	long		nb;
+	int			sign;
+	int			i;
+
+	i = 0;
+	nb = 0;
+	sign = 1;
+	i = ft_passing(str);
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	return (ft_atoi_help (str, nb, sign, i));
 }

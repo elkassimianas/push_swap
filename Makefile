@@ -6,7 +6,7 @@
 #    By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 11:17:34 by ael-kass          #+#    #+#              #
-#    Updated: 2021/11/13 21:38:14 by ael-kass         ###   ########.fr        #
+#    Updated: 2021/11/13 22:33:15 by ael-kass         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC_BONUS = ./srcs/bonus/parsing_bonus.c \
 			./srcs/bonus/tools_bonus.c \
 			./srcs/bonus/main_bonus.c \
 			./srcs/bonus/operations_bonus1.c \
+			./srcs/bonus/check_operations_bonus.c \
 			./srcs/bonus/get_next_line/get_next_line_bonus.c \
 			./srcs/bonus/get_next_line/get_next_line_utils_bonus.c
 
