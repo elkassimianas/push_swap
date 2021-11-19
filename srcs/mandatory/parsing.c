@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:31:54 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/13 20:59:34 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:29:37 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	check_duplicate(char **str, int len)
 		b = i;
 		while (++b < len)
 		{
-			if (ft_strncmp(str[i], str[b], ft_strlen(str[i])) == 0)
+			if (strcmp(str[i], str[b]) == 0)
 			{
 				ft_putstr_fd("Error\n", 2);
 				exit(EXIT_FAILURE);

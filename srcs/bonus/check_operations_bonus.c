@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 22:31:16 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/14 00:01:04 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:28:22 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 static int	check_operations1(t_node **top_a, t_node **top_b, char *str)
 {
-	if (!ft_strncmp(str, "ra", ft_strlen(str)) || \
-			!ft_strncmp(str, "rb", ft_strlen(str)) || \
-			!ft_strncmp(str, "rr", ft_strlen(str)))
+	if (!strcmp(str, "ra") || \
+			!strcmp(str, "rb") || \
+			!strcmp(str, "rr"))
 	{
-		if (!ft_strncmp(str, "ra", ft_strlen(str)))
+		if (!strcmp(str, "ra"))
 			rotate(top_a);
-		else if (!ft_strncmp(str, "rb", ft_strlen(str)))
+		else if (!strcmp(str, "rb"))
 			rotate(top_b);
 		else
 		{
@@ -53,10 +53,10 @@ static int	check_operations2(t_node **top_a, t_node **top_b, char *str)
 
 static int	check_operations3(t_node **top_a, t_node **top_b, char *str)
 {
-	if (!ft_strncmp(str, "pa", ft_strlen(str)) || \
-			!ft_strncmp(str, "pb", ft_strlen(str)))
+	if (!strcmp(str, "pa") || \
+			!strcmp(str, "pb"))
 	{
-		if (!ft_strncmp(str, "pa", ft_strlen(str)))
+		if (!strcmp(str, "pa"))
 			push_to_stack(top_a, top_b);
 		else
 			push_to_stack(top_b, top_a);
@@ -67,13 +67,13 @@ static int	check_operations3(t_node **top_a, t_node **top_b, char *str)
 
 static int	check_operations(t_node **top_a, t_node **top_b, char *str)
 {
-	if (!ft_strncmp(str, "sa", ft_strlen(str)) || \
-			!ft_strncmp(str, "sb", ft_strlen(str)) || \
-			!ft_strncmp(str, "ss", ft_strlen(str)))
+	if (!strcmp(str, "sa") || \
+			!strcmp(str, "sb") || \
+			!strcmp(str, "ss"))
 	{
-		if (!ft_strncmp(str, "sa", ft_strlen(str)))
+		if (!strcmp(str, "sa"))
 			swap(top_a);
-		else if (!ft_strncmp(str, "sb", ft_strlen(str)))
+		else if (!strcmp(str, "sb"))
 			swap(top_b);
 		else
 		{

@@ -6,7 +6,7 @@
 /*   By: ael-kass <ael-kass@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 02:04:03 by ael-kass          #+#    #+#             */
-/*   Updated: 2021/11/14 00:02:18 by ael-kass         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:40:55 by ael-kass         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	rotate(t_node **top)
 {
 	t_node	*tail;
 
+	if (*top == NULL)
+		return ;
 	tail = *top;
 	while (tail->next != NULL)
 		tail = tail->next;
@@ -53,6 +55,8 @@ void	reverse_rotate(t_node **top)
 	t_node		*temp;
 
 	if (*top == NULL)
+		return ;
+	if (len_linked_list(*top) <= 1)
 		return ;
 	temp = *top;
 	while (temp->next->next != NULL)
